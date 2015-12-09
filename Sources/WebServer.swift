@@ -21,12 +21,12 @@ public class WebServer {
 				socket.writeUTF8("HTTP/1.1 200 OK\r\n")
 
 				let length = 4
-		        socket.writeUTF8("Content-Length: \(length)\r\n")
+				socket.writeUTF8("Content-Length: \(length)\r\n")
 
 				socket.writeUTF8("Content-Type: text/html\r\n")
 				socket.writeUTF8("\r\n")
 
-		        socket.writeUInt8([UInt8]("TEST".utf8))
+				socket.writeUInt8([UInt8]("TEST".utf8))
 			}
 
 			socket.release()
